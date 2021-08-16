@@ -32,19 +32,27 @@
 
     <div class="play-buttons">
       <img class='triangle' src="images/bg-triangle.svg" alt="triangle background">
-      <img id='rock' class='btn' src="images/icon-rock.svg" alt="rock button">
-      <img id='paper' class='btn' src="images/icon-paper.svg" alt="paper button">
-      <img id='scissors' class='btn' src="images/icon-scissors.svg" alt="scissors button">
+      <div id='rock' class="btn">
+        <img src="images/icon-rock.svg" alt="rock button">
+      </div>
+      <div id='paper' class="btn">
+        <img src="images/icon-paper.svg" alt="paper button">
+      </div>
+      <div id='scissors' class="btn">
+        <img src="images/icon-scissors.svg" alt="scissors button">
+      </div>
     </div>
 
-    <p class='rules'>Rules</p>
+    <p id='rules' class='rules'>Rules</p>
 
-    <div class="rules-modal">
-      <div class="modal-header">
-        <h2>Rules</h2>
-        <img id='close' src="images/icon-close.svg" alt="close">
+    <div class="modal-screen display-none">
+      <div class="rules-modal">
+        <div class="modal-header">
+          <h2>Rules</h2>
+          <img id='close' src="images/icon-close.svg" alt="close">
+        </div>
+        <img src="images/image-rules.svg" alt="image displaying the rules of the game">
       </div>
-      <img src="images/image-rules.svg" alt="image displaying the rules of the game">
     </div>
 
     <script src="index.js"></script>
