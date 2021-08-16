@@ -185,6 +185,7 @@ body {
 
 #close:hover {
     cursor: pointer;
+    filter: brightness(0);
 }
 
 .display-none {
