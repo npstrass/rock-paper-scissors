@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <img src="images/logo.svg" alt="rock paper scissors logo">
+      <div class="score">
+        <p>Score</p>
+        <p id='score'>0</p>
+      </div>
+    </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <div class="play-buttons">
+      <img class='triangle' src="images/bg-triangle.svg" alt="triangle background">
+      <img id='rock' class='btn' src="images/icon-rock.svg" alt="rock button">
+      <img id='paper' class='btn' src="images/icon-paper.svg" alt="paper button">
+      <img id='scissors' class='btn' src="images/icon-scissors.svg" alt="scissors button">
+    </div>
 
-  Score
-  Rules
+    <p class='rules'>Rules</p>
 
-  You Picked
-  The House Picked
+    <div class="rules-modal">
+      <div class="modal-header">
+        <h2>Rules</h2>
+        <img id='close' src="images/icon-close.svg" alt="close">
+      </div>
+      <img src="images/image-rules.svg" alt="image displaying the rules of the game">
+    </div>
 
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
+
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->
