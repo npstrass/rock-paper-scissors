@@ -94,38 +94,46 @@ body {
   border-radius: 50%;
 }
 
-.btn:hover {
-  cursor: pointer;
-}
-
 .btn img {
   width: 50%;
   height: auto;
 }
 
-#rock {
+/* .btn:hover {
+  cursor: pointer;
+  height: 122px;
+  width: 122px;
+} */
+
+.rock {
   bottom: 0;
   right: 50%;
   transform: translate(50%, 50%);
   border: solid 18px var(--rock-2);
   box-shadow: inset 0px 8px 0px rgba(0, 0, 0, 0.25), 0px 8px 0px var(--rock-1);
+  opacity: 1;
+  transition: 200ms;
 }
 
-#paper {
+.paper {
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
   border: solid 18px var(--paper-2);
   box-shadow: inset 0px 8px 0px rgba(0, 0, 0, 0.25), 0px 8px 0px var(--paper-1);
+  opacity: 1;
+  transition: 200ms;
 }
 
-#scissors {
+.scissors {
   top: 0;
   right: 0;
   transform: translate(50%, -50%);
   border: solid 18px var(--scissors-2);
   box-shadow: inset 0px 8px 0px rgba(0, 0, 0, 0.25),
     0px 8px 0px var(--scissors-1);
+  opacity: 1;
+  transition: 200ms;
 }
 
 @media (max-width: 600px) {
@@ -180,12 +188,12 @@ body {
 }
 
 #close {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 #close:hover {
-    cursor: pointer;
-    filter: brightness(0);
+  cursor: pointer;
+  filter: brightness(0);
 }
 
 .display-none {
