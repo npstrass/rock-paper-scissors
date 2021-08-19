@@ -6,8 +6,10 @@ const compChoice = document.getElementById("compChoice");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
-const gameOver = document.getElementById('gameOver')
-const playAgain = document.getElementById('playAgain')
+const gameOverContainer = document.getElementById("gameOverContainer");
+const gameOver = document.getElementById("gameOver");
+const playAgain = document.getElementById("playAgain");
+score.innerText = 0;
 
 function getCompChoice() {
   let compSelect = Math.floor(Math.random() * 3) + 1;
@@ -42,21 +44,48 @@ function runGame(pick) {
 rock.addEventListener("click", () => {
   let y = runGame("rock");
   function declareWinner() {
+    gameOverContainer.classList.remove("disNone");
     if (y === "rock") {
-      console.log("its a tie");
+      gameOver.innerText = "you tied";
     } else if (y === "paper") {
-      console.log("you lost");
+      gameOver.innerText = "you lost";
+      if (parseInt(score.innerText) > 0) {
+          score.innerText = parseInt(score.innerText) - 1
+      }
     } else if (y === "scissors") {
-      console.log("you won");
+      gameOver.innerText = "you won";
+      score.innerText = parseInt(score.innerText) + 1
     }
   }
   setTimeout(declareWinner, 2500);
 });
 
 paper.addEventListener("click", () => {
-  runGame("paper");
+  let y = runGame("paper");
+  function declareWinner() {
+    if (y === "paper") {
+      console.log("its a tie");
+    } else if (y === "scissors") {
+      console.log("you lost");
+    } else if (y === "rock") {
+      console.log("you won");
+    }
+  }
+  setTimeout(declareWinner, 2500);
 });
 
 scissors.addEventListener("click", () => {
-  runGame("scissors");
+  let y = runGame("scissors");
+  function declareWinner() {
+    if (y === "scissors") {
+      console.log("its a tie");
+    } else if (y === "rock") {
+      console.log("you lost");
+    } else if (y === "paper") {
+      console.log("you won");
+    }
+  }
+  setTimeout(declareWinner, 2500);
 });
+
+playAgain.addEventListener('click', {runGame})
