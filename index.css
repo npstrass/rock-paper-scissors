@@ -176,10 +176,19 @@ h2 {
   justify-content: space-between;
   height: 15rem;
   width: 85%;
-  max-width: 40rem;
+  max-width: 50rem;
   margin: 8rem auto 0;
   padding: 2rem;
   box-sizing: border-box;
+}
+
+.choiceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
 }
 
 .compChoiceContainer,
@@ -198,6 +207,50 @@ h2 {
   width: 220px;
 }
 
+.gameOverContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  background-color: white;
+  color: var(--dark-text);
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
 .disNone {
   display: none;
+}
+
+@media (max-width: 800px) {
+
+  body {
+    overflow: scroll;
+  }
+
+  .playContainer {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .gameOverContainer {
+    order: 99;
+  }
+
+  .choiceContainer {
+    margin-bottom: 3rem;
+  }
+
+  .rules {
+    padding: .5rem;
+  }
 }

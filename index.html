@@ -13,38 +13,50 @@
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
   </head>
   <body>
-
     <div class="header">
       <img src="images/logo.svg" alt="rock paper scissors logo" />
       <div class="scoreContainer">
         <p>SCORE</p>
-        <h2 id='score'>0</h2>
+        <h2 id="score">0</h2>
       </div>
     </div>
 
-    <div id='gameContainer' class="gameContainer">
+    <div id="gameContainer" class="gameContainer">
       <img src="images/bg-triangle.svg" alt="triangle" />
       <div class="rockContainer">
-        <div id='rock' class="rock"></div>
+        <div id="rock" class="rock"></div>
       </div>
       <div class="paperContainer">
-        <div id='paper' class="paper"></div>
+        <div id="paper" class="paper"></div>
       </div>
       <div class="scissorsContainer">
-        <div id='scissors' class="scissors"></div>
-      </div>
-    </div>
-    
-    <div id='playContainer' class="playContainer disNone">
-      <div id='userChoiceContainer' class="userChoiceContainer">
-        <div id='userChoice' class="userChoice"></div>
-      </div>
-      <div id="compChoiceContainer" class="compChoiceContainer">
-        <div id='compChoice' class="compChoice"></div>
+        <div id="scissors" class="scissors"></div>
       </div>
     </div>
 
-    <p id='rules' class='rules'>Rules</p>
+    <div id="playContainer" class="playContainer disNone">
+      <div class="choiceContainer">
+        <h3>YOU SELECTED</h3>
+        <div id="userChoiceContainer" class="userChoiceContainer">
+          <div id="userChoice" class="userChoice"></div>
+        </div>
+      </div>
+
+      <div id='gameOverContainer' class="gameOverContainer disNone">
+        <h1 id="gameOver">You Win</h1>
+        <button id="playAgain" class="btn">Play again</button>
+      </div>
+
+      <div class="choiceContainer">
+        <h3>COMPUTER SELECTS</h3>
+        <div id="compChoiceContainer" class="compChoiceContainer">
+          <div id="compChoice" class="compChoice"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <p id="rules" class="rules">Rules</p>
 
     <script src="index.js"></script>
   </body>
