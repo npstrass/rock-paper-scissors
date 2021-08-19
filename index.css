@@ -16,10 +16,129 @@
   --header-outline: hsl(217, 16%, 45%);
   --background-1: hsl(214, 47%, 23%);
   --background-2: hsl(237, 49%, 15%);
+
+  --barlow: "Barlow Semi Condensed", sans-serif;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--barlow);
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at top,
+    var(--background-1),
+    var(--background-2)
+  );
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  border: 1px solid var(--header-outline);
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+  min-width: 120px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: .5rem;
+  background-color: white;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: .85rem;
+  letter-spacing: 3px;
+  color: var(--score-text);
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  color: var(--dark-text)
+}
+
+.rules {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-block;
+  color: white;
+  border: 1px solid;
+  padding: .5rem 2.25rem;
+}
+
+.gameContainer img {
+  height: 13.75rem;
+  width: 16.25rem;
+}
+
+.gameContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 8rem auto 0;
+}
+
+.gameBtn {
+  position: absolute;
+  height: 7.5rem;
+  width: 7.5rem;
+  border: 1.125rem solid;
+  border-radius: 50%;
+  box-shadow: inset 0 .5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.rock {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: var(--rock-2);
+  box-shadow: inset 0 .5rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 0 var(--rock-1);
+  background: url(images/icon-rock.svg), white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+.paper {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  color: var(--paper-2);
+  box-shadow: inset 0 .5rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 0 var(--paper-1);
+  background: url(images/icon-paper.svg), white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+.scissors {
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  color: var(--scissors-2);
+  box-shadow: inset 0 .5rem 0 rgba(0, 0, 0, 0.2), 0 .5rem 0 var(--scissors-1);
+  background: url(images/icon-scissors.svg), white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
 }
