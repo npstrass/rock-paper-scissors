@@ -287,6 +287,10 @@ h2 {
 }
 
 @media (max-width: 800px) {
+  :root {
+    font-size: 12px;
+  }
+
   body {
     overflow-y: scroll;
   }
@@ -307,8 +311,23 @@ h2 {
   .rules {
     padding: 0.5rem;
   }
-  
+
   button {
     margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    width: 10rem;
+  }
+
+  .scoreContainer {
+    min-width: 80px;
+  }
+
+  .gameContainer img {
+    height: 10rem;
+    width: 12rem;
   }
 }
