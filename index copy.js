@@ -66,6 +66,20 @@ function runGame(userChoice) {
       gameOver.innerText = "you lose";
     }
   }
+
+  if (gameOver.innerText === "you win") {
+    setTimeout(() => {
+      document.getElementById("userDidWin").classList.remove("disNone");
+      score.innerText = parseInt(score.innerText) + 1;
+    }, 1000);
+  } else if (gameOver.innerText === "you lose") {
+    setTimeout(() => {
+      document.getElementById("compDidWin").classList.remove("disNone");
+      if (parseInt(score.innerText) > 0) {
+        score.innerText = parseInt(score.innerText) - 1;
+      }
+    }, 1000);
+  }
 }
 
 document.getElementById("rock").addEventListener("click", () => {
@@ -99,6 +113,8 @@ playAgain.addEventListener("click", () => {
   playContainer.classList.add("disNone");
   gameContainer.classList.remove("disNone");
   gameOverContainer.classList.add("disNone");
+  document.getElementById("userDidWin").classList.add("disNone");
+  document.getElementById("compDidWin").classList.add("disNone");
 
   userPick.className = "userChoice";
   compPick.className = "compChoice";
