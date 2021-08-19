@@ -1,28 +1,12 @@
-const score = document.querySelector("#score");
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");
-const triangle = document.querySelector(".triangle");
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+const gameContainer = document.getElementById("gameContainer");
+const playContainer = document.getElementById("playContainer");
+const score = document.getElementById("score");
+const userChoice = document.getElementById("userChoice");
+const compChoice = document.getElementById("compChoice");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+const compSelect = getCompChoice();
 
 function getCompChoice() {
   let compChoice = Math.floor(Math.random() * 3) + 1;
@@ -37,23 +21,19 @@ function getCompChoice() {
   return compChoice;
 }
 
-const compChoice = getCompChoice();
-console.log(compChoice);
-
-//
-//
-//
-//
-//
+console.log(compSelect);
 
 rock.addEventListener("click", () => {
-  userChoice = "rock";
+  userSelect = "rock";
+  console.log("rock");
 });
 
 paper.addEventListener("click", () => {
-  userChoice = "paper";
+  userSelect = "paper";
+  console.log("paper");
 });
 
 scissors.addEventListener("click", () => {
-  userChoice = "scissors";
+  userSelect = "scissors";
+  console.log("scissors");
 });

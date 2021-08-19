@@ -18,19 +18,33 @@
       <img src="images/logo.svg" alt="rock paper scissors logo" />
       <div class="scoreContainer">
         <p>SCORE</p>
-        <h2>0</h2>
+        <h2 id='score'>0</h2>
       </div>
     </div>
 
-    <div class="gameContainer">
+    <div id='gameContainer' class="gameContainer">
       <img src="images/bg-triangle.svg" alt="triangle" />
-      <div id="rock" class="gameBtn rock"></div>
-      <div id="paper" class="gameBtn paper"></div>
-      <div id="scissors" class="gameBtn scissors"></div>
-      <div id="compChoice" class="compChoice"></div>
+      <div class="rockContainer">
+        <div id='rock' class="rock"></div>
+      </div>
+      <div class="paperContainer">
+        <div id='paper' class="paper"></div>
+      </div>
+      <div class="scissorsContainer">
+        <div id='scissors' class="scissors"></div>
+      </div>
+    </div>
+    
+    <div id='playContainer' class="playContainer disNone">
+      <div id='userChoiceContainer' class="userChoiceContainer">
+        <div id='userChoice' class="userChoice"></div>
+      </div>
+      <div id="compChoiceContainer" class="compChoiceContainer">
+        <div id='compChoice' class="compChoice"></div>
+      </div>
     </div>
 
-    <p class='rules'>Rules</p>
+    <p id='rules' class='rules'>Rules</p>
 
     <script src="index.js"></script>
   </body>
