@@ -232,20 +232,20 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 20rem;
-  width: 20rem;
+  height: 18rem;
+  width: 18rem;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.04);
 }
 
 .larger {
-  height: 26rem;
-  width: 26rem;
+  height: 23rem;
+  width: 23rem;
 }
 
 .largest {
-  height: 30rem;
-  width: 30rem;
+  height: 27rem;
+  width: 27rem;
 }
 
 .modal {
@@ -315,7 +315,7 @@ h2 {
     left: 50%;
     padding: 2rem;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, .95);
+    background: rgba(0, 0, 0, 0.95);
     border-radius: 1rem;
     z-index: 3;
     order: 99;
@@ -326,11 +326,21 @@ h2 {
   }
 
   .rules {
+    right: 50%;
+    transform: translate(50%, 0);
     padding: 0.5rem;
   }
 
   button {
     margin-bottom: 6rem;
+  }
+
+  .userChoice,
+  .compChoice,
+  .compChoiceContainer,
+  .userChoiceContainer {
+    height: 10.75rem;
+    width: 10.75rem;
   }
 }
 
