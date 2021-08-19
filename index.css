@@ -25,16 +25,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--barlow);
-}
-
-body {
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   background: radial-gradient(
     circle at top,
     var(--background-1),
     var(--background-2)
   );
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header {
@@ -141,6 +140,7 @@ h2 {
   border: 1.125rem solid;
   border-radius: 50%;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .rock {
@@ -231,12 +231,11 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: -1;
   transform: translate(-50%, -50%);
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .larger {
@@ -249,13 +248,47 @@ h2 {
   width: 30rem;
 }
 
+.modal {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0.25rem 0.25rem 6rem rgba(0, 0, 0, 0.2);
+}
+
+.text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal h3 {
+  color: var(--dark-text);
+  font-size: 2rem;
+  margin: 0;
+}
+
 .disNone {
   display: none;
 }
 
 @media (max-width: 800px) {
   body {
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   .playContainer {
@@ -273,5 +306,9 @@ h2 {
 
   .rules {
     padding: 0.5rem;
+  }
+  
+  button {
+    margin-bottom: 6rem;
   }
 }

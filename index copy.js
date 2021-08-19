@@ -119,3 +119,11 @@ playAgain.addEventListener("click", () => {
   userPick.className = "userChoice";
   compPick.className = "compChoice";
 });
+
+document.getElementById('rules').addEventListener('click', () => {
+  document.getElementById('modal').classList.remove('disNone')
+})
+
+document.getElementById('close').addEventListener('click', () => {
+  document.getElementById('modal').classList.add('disNone')
+})
