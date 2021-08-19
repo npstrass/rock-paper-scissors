@@ -1,49 +1,59 @@
-const rules = document.querySelector("#rules");
-const closeBtn = document.querySelector("#close");
-const modal = document.querySelector(".modal-screen");
-
 const score = document.querySelector("#score");
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 const triangle = document.querySelector(".triangle");
 
-rules.addEventListener("click", () => {
-  modal.classList.remove("display-none");
-});
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.add("display-none");
-});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+function getCompChoice() {
+  let compChoice = Math.floor(Math.random() * 3) + 1;
 
-
-
-
-
-
-
-
-
-let computerChoice = Math.floor(Math.random() * 3) + 1;
-if (computerChoice === 1) {
-  computerChoice = "rock";
-} else if (computerChoice === 2) {
-  computerChoice = "paper";
-} else if (computerChoice === 3) {
-  computerChoice = "scissors";
+  if (compChoice === 1) {
+    compChoice = "rock";
+  } else if (compChoice === 2) {
+    compChoice = "paper";
+  } else if (compChoice === 3) {
+    compChoice = "scissors";
+  }
+  return compChoice;
 }
 
-console.log(computerChoice)
+const compChoice = getCompChoice();
+console.log(compChoice);
+
+//
+//
+//
+//
+//
 
 rock.addEventListener("click", () => {
-  userChoice = 'rock';
+  userChoice = "rock";
 });
 
 paper.addEventListener("click", () => {
-  userChoice = 'paper';
+  userChoice = "paper";
 });
 
 scissors.addEventListener("click", () => {
-  userChoice = 'scissors';
+  userChoice = "scissors";
 });
