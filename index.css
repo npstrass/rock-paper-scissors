@@ -97,7 +97,7 @@ h2 {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  width: -moz-max-content; 
+  width: -moz-max-content;
   margin: 8rem auto 0;
 }
 
@@ -285,6 +285,14 @@ h2 {
 
 .disNone {
   display: none;
+}
+
+.rock:hover,
+.paper:hover,
+.scissors:hover,
+.btn,
+.rules {
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
